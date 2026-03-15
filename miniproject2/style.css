@@ -1,0 +1,96 @@
+/* Body Styling */
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#f8f9fa,#dfe6e9);
+}
+
+/* Title */
+h1{
+    font-size:40px;
+    color:#333;
+    margin-top:30px;
+}
+
+/* Subtitle */
+h2{
+    color:#555;
+}
+
+/* Button Container (Ludo Board Style) */
+.btn-container{
+    display:grid;
+    grid-template-columns:150px 150px;
+    grid-template-rows:150px 150px;
+    gap:15px;
+    justify-content:center;
+    margin-top:40px;
+}
+
+/* Buttons Base Style */
+.btn{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    font-weight:bold;
+    border-radius:15px;
+    cursor:pointer;
+    color:white;
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+    transition:transform 0.2s, box-shadow 0.2s;
+    border:2px solid black;
+}
+
+/* Ludo Colors */
+.btn:nth-child(1){
+    background:#ff3b3b; /* Red */
+}
+
+.btn:nth-child(2){
+    background:#3bff5e; /* Green */
+}
+
+.btn:nth-child(3){
+    background:#ffd93b; /* Yellow */
+    color:black;
+}
+
+.btn:nth-child(4){
+    background:#3b82ff; /* Blue */
+}
+
+/* Hover Effect */
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Click Effect */
+.btn:active{
+    transform:scale(0.95);
+}
+
+/* Game Flash Animation */
+.flash{
+    animation:flashEffect 0.4s;
+}
+
+@keyframes flashEffect{
+    0%{opacity:1;}
+    50%{opacity:0.3;}
+    100%{opacity:1;}
+}
+
+.userflash{
+background:white !important;
+}
+
+.gameflash{
+background:black !important;
+color:white;
+}
+
+.game-over{
+background:red !important;
+}

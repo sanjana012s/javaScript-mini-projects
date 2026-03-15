@@ -1,0 +1,166 @@
+/* 1 Background Gradient Animation */
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg,#667eea,#764ba2,#ff6a88,#ff99ac);
+    background-size:800% 800%;
+    animation:bgMove 10s ease infinite;
+    text-align:center;
+    padding:40px;
+}
+
+/* 2 Title Animation */
+h1{
+    color:white;
+    font-size:40px;
+    animation:slideDown 1s ease;
+}
+
+/* Input Styling */
+input{
+    padding:10px;
+    width:220px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    transition:all 0.3s ease; /* transition 1 */
+}
+
+/* 3 Input Focus Animation */
+input:focus{
+    transform:scale(1.05);
+    box-shadow:0 0 10px #fff;
+}
+
+/* Button Style */
+button{
+    padding:10px 15px;
+    border:none;
+    border-radius:6px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+    transition:all 0.3s ease; /* transition 2 */
+}
+
+/* 4 Button Hover Animation */
+button:hover{
+    transform:translateY(-3px);
+    background:#e63950;
+}
+
+/* Todo List Box */
+ul{
+    margin-top:30px;
+    list-style:none;
+    padding:0;
+}
+
+/* List Item Style */
+li{
+    background:white;
+    padding:12px;
+    margin:10px auto;
+    width:260px;
+    border-radius:8px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    animation:fadeIn 0.8s ease; /* animation 5 */
+    transition:all 0.3s ease; /* transition 3 */
+}
+
+/* 6 Card Hover Animation */
+li:hover{
+    transform:scale(1.03);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Delete Button */
+.delete{
+    background:#ff4d4d;
+    transition:all 0.3s ease; /* transition 4 */
+}
+
+/* 7 Delete Hover Animation */
+.delete:hover{
+    background:#cc0000;
+    transform:rotate(-5deg);
+}
+
+/* 8 Pulse Animation */
+#addBtn{
+    animation:pulse 2s infinite;
+    transition:background 0.3s ease; /* transition 5 */
+}
+
+/* 9 Shake Animation */
+.delete:active{
+    animation:shake 0.4s;
+}
+
+/* 10 Floating Animation */
+input{
+    animation:float 3s ease-in-out infinite;
+    transition:box-shadow 0.3s ease; /* transition 6 */
+}
+
+/* extra transition */
+li button{
+    transition:transform 0.3s ease; /* transition 7 */
+}
+
+/* Keyframes */
+
+/* Background Move */
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Slide Down */
+@keyframes slideDown{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+
+/* Fade In */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Pulse */
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+}
+
+/* Shake */
+@keyframes shake{
+    0%{transform:translateX(0);}
+    25%{transform:translateX(-4px);}
+    50%{transform:translateX(4px);}
+    75%{transform:translateX(-4px);}
+    100%{transform:translateX(0);}
+}
+
+/* Float */
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-5px);}
+    100%{transform:translateY(0);}
+}
