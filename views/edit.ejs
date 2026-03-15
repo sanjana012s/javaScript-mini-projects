@@ -1,0 +1,13 @@
+<h2>Edit Post</h2>
+
+<form action="/posts/<%= post.id %>?_method=PUT" method="POST">
+
+<textarea name="content">
+<%= post.content %>
+</textarea>
+
+<br><br>
+
+<button>Update</button>
+
+</form>

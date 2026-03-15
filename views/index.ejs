@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>All Posts</title>
+</head>
+
+<body>
+
+<h1>All Posts</h1>
+
+<% posts.forEach((post)=>{ %>
+
+<h3><%= post.username %></h3>
+
+<p><%= post.content %></p>
+
+<a href="/posts/<%= post.id %>/edit">Edit</a>
+
+<hr>
+
+<% }) %>
+
+
+</body>
+</html>
